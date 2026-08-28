@@ -241,6 +241,23 @@
   .conn-badge b{display:block;font-size:14px;}
   .conn-text{font-size:14px;color:var(--ink-soft);padding-top:8px;}
 
+  /* ---------- LOCATION MAP ---------- */
+  .map-block{margin-top:56px;}
+  .map-frame{
+    position:relative;width:100%;height:420px;overflow:hidden;
+    border:1px solid rgba(198,160,89,0.25);border-radius:2px;
+  }
+  .map-frame iframe{width:100%;height:100%;border:0;filter:grayscale(0.15) contrast(1.05);}
+  .map-meta{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center;
+    margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink-soft);
+  }
+  .map-meta a{
+    color:var(--brass);border:1px solid rgba(198,160,89,0.4);
+    padding:9px 16px;border-radius:2px;transition:background .25s ease, color .25s ease;
+  }
+  .map-meta a:hover{background:var(--brass);color:var(--ink);}
+
   /* ---------- MASTERPLAN ---------- */
   .mp-layout{display:grid;grid-template-columns:1fr 0.85fr;gap:56px;align-items:start;}
   .mp-layout img{border:1px solid var(--stone);}
@@ -478,6 +495,19 @@
         <div class="conn-item"><div class="conn-badge"><b>15</b>min</div><div class="conn-text">Forum Mall &amp; Prestige Tech Cloud</div></div>
         <div class="conn-item"><div class="conn-badge"><b>15</b>min</div><div class="conn-text">Forum KWIN City</div></div>
         <div class="conn-item"><div class="conn-badge"><b>20</b>min</div><div class="conn-text">Boeing &amp; SAP Technologies</div></div>
+      </div>
+    </div>
+
+    <div class="map-block reveal">
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=13.271167,77.660972&z=15&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Eden Orchards location map" allowfullscreen></iframe>
+      </div>
+      <div class="map-meta">
+        <span>Eden Orchards &middot; Devanahalli</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=13.271167,77.660972" target="_blank" rel="noopener">Get Directions →</a>
       </div>
     </div>
   </div>
